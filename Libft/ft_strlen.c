@@ -1,0 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/06 13:27:27 by tfockede          #+#    #+#             */
+/*   Updated: 2022/01/06 13:27:27 by tfockede         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <stddef.h>
+
+size_t	ft_strlen(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	str[] = "Test string is 33 characters long";
+	int x;
+
+	x = ft_strlen(str);
+	printf("Test string is %d characters long\n", x);
+}
+*/
