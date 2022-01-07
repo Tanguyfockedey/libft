@@ -9,6 +9,7 @@
 /*   Updated: 2022/01/06 17:15:11 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stddef.h>
 
 void	*ft_memcpy(void *to, const void *from, size_t size)

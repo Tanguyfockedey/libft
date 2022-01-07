@@ -9,6 +9,7 @@
 /*   Updated: 2022/01/06 15:26:03 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stddef.h>
 
 void	*ft_memset(void *block, int c, size_t size)

@@ -9,6 +9,7 @@
 /*   Updated: 2022/01/06 17:05:03 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stddef.h>
 
 void	ft_bzero(void *block, size_t size)
@@ -24,7 +25,7 @@ void	ft_bzero(void *block, size_t size)
 	}
 }
 
-/*
+
 #include <stdio.h>
 int main(void)
 {
@@ -34,4 +35,3 @@ int main(void)
 	ft_bzero(str, 20);
 	printf("%s", str);
 }
-*/

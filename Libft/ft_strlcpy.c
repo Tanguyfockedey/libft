@@ -6,12 +6,13 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 18:19:58 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/07 17:08:02 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/07 17:38:58 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
@@ -41,18 +42,18 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 /*
 #include <stdio.h>
-#include <bsd/string.h>
+//#include <bsd/string.h>
 int main(void)
 {
 	char	src[] = "Strlcpy";
-	char	dest1[15] = "0123456789";
+	//char	dest1[15] = "0123456789";
 	char	dest2[15] = "0123456789";
 	int		size = 0;
 
 	while (size < 10)
 	{
-	printf("%s\t%zu\n", dest1, strlcpy(dest1, src, size));
-	printf("%s\t%d\n\n", dest2, ft_strlcpy(dest2, src, size));
+	//printf("%s\t%zu\n", dest1, strlcpy(dest1, src, size));
+	printf("%s\t%zu\n\n", dest2, ft_strlcpy(dest2, src, size));
 	size++;
 	}
 }

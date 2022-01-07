@@ -6,13 +6,15 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 10:39:17 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/07 16:58:19 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/07 17:33:04 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -20,11 +22,11 @@ unsigned int	ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	result;
+	size_t	i;
+	size_t	j;
+	size_t	result;
 
 	if (size == 0)
 		return (ft_strlen(src));
@@ -44,18 +46,19 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 }
 
 /*
-#include <bsd/string.h>
+//#include <bsd/string.h>
 #include <stdio.h>
 int	main(void)
 {
-	char	dest1 [20]= "01234";
+//	char	dest1 [20]= "01234";
 	char	dest2 [20]= "01234";
 	char	src[] = "abc";
 	unsigned int	i = 10;
-	unsigned int	out1, out2;
+//	unsigned int	out1;
+	unsigned int	out2;
 
-	out1 = strlcat(dest1, src, i);
-	printf("%s\t%d\n", dest1, out1);
+//	out1 = strlcat(dest1, src, i);
+//	printf("%s\t%d\n", dest1, out1);
 	out2 = ft_strlcat(dest2, src, i);
 	printf("%s\t%d\n\n", dest2, out2);
 

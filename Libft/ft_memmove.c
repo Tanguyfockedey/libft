@@ -9,6 +9,7 @@
 /*   Updated: 2022/01/06 17:56:50 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdlib.h> //contains malloc and size_t
 
 void	*ft_memmove(void *to, const void *from, size_t size)
