@@ -13,16 +13,16 @@
 
 void	*ft_memcpy(void *to, const void *from, size_t size)
 {
-	char	*ptr1;
-	const char	*ptr2;
+	const char	*ptr1;
+	char	*ptr2;
 	size_t	i;
 
 	i = 0;
-	ptr1 = to;
-	ptr2 = from;
-	while(size-- > 0)
+	ptr2 = to;
+	ptr1 = from;
+	while(i < size)
 	{
-		ptr1[i] = ptr2[i];
+		ptr2[i] = ptr1[i];
 		i++;
 	}
 	return(to);
