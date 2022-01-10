@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Returns true (1) if c is a printing character. Printing characters include 
+	all the graphic characters, plus the space (‘ ’) character.
+*/
+
 int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')

@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	memmove copies the size bytes at from into the size bytes at to, even if 
+	those two blocks of space overlap. In the case of overlap, memmove is 
+	careful to copy the original values of the bytes in the block at from, 
+	including those bytes which also belong to the block at to.
+	The value returned by memmove is the value of to.
+*/
+
 #include <stdlib.h> //contains malloc and size_t
 
 void	*ft_memmove(void *to, const void *from, size_t size)

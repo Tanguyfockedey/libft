@@ -6,9 +6,14 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 17:35:36 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/07 18:01:01 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/10 15:04:35 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	If c is a lower-case letter, toupper returns the corresponding upper-case 
+	letter. Otherwise c is returned unchanged.
+*/
 
 int	ft_toupper(int c)
 {

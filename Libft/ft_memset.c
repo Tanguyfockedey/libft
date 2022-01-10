@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	This function copies the value of c (converted to an unsigned char) into 
+	each of the first size bytes of the object beginning at block. It returns 
+	the value of block.
+*/
+
 #include <stddef.h>
 
 void	*ft_memset(void *block, int c, size_t size)

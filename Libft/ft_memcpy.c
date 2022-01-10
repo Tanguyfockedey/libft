@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	The memcpy function copies size bytes from the object beginning at from 
+	into the object beginning at to. The behavior of this function is undefined
+	if the two arrays to and from overlap.
+*/
+
 #include <stddef.h>
 
 void	*ft_memcpy(void *to, const void *from, size_t size)

@@ -6,9 +6,17 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 10:39:17 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/07 18:05:32 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/10 14:44:59 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	The strlcat() function concatenates strings. It is designed to be safer, 
+	more consistent, and less error prone replacements for strncat(). 
+	Unlike this function, strlcat() takes the full size of the buffer (not just 
+	the length) and guarantee to NUL-terminate the result (as long as there is 
+	at least one byte free in dst). 
+*/
 
 #include <stddef.h>
 

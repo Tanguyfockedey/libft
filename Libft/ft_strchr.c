@@ -6,9 +6,15 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:22:33 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/07 19:08:51 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/10 14:07:48 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*	
+	The strchr function finds the first occurrence of the byte c (converted to 
+	a char) in the string beginning at string. The return value is a pointer to 
+	the located byte, or a null pointer if no match was found.
+*/
 
 #include <stddef.h>
 

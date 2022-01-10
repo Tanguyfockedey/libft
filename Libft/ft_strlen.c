@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	The strlen function returns the length of the string str in bytes.
+*/
+
 #include <stddef.h>
 
 size_t	ft_strlen(const char *str)

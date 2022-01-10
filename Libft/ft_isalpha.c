@@ -6,9 +6,13 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:46:09 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/05 15:39:24 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/10 14:21:30 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	Returns true (1) if c is an alphabetic character (a letter).
+*/
 
 int	ft_isalpha(int c)
 {

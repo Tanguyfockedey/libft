@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	This function copies the value "0" into	each of the first size bytes of the 
+	object beginning at block.
+*/
+
 #include <stddef.h>
 
 void	ft_bzero(void *block, size_t size)

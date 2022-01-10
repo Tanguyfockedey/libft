@@ -6,9 +6,14 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:30:38 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/07 18:07:24 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/10 15:03:08 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+	If c is an upper-case letter, tolower returns the corresponding lower-case 
+	letter. If c is not an upper-case letter, c is returned unchanged.
+*/
 
 int	ft_tolower(int c)
 {
