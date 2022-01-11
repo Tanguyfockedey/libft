@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:31:45 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/10 14:54:56 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/11 13:45:45 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,32 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t size)
 {
+	size_t	i;
+	int		equals;
 
+	i = 0;
+	if (size < 1)
+		return (0);
+	while (s1[i] != '\0' && i < size - 1)
+	{
+		equals = s1[i] - s2[i];
+		if (equals != 0)
+			return (equals);
+		i++;
+	}
+	equals = s1[i] - s2[i];
+	return (equals);
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+int	main(void)
+{
+	char	str1[] = "This is a test";
+	char	str2[] = "This is a test";
+
+	printf("%d\n", ft_strncmp(str1, str2, 7));
+	printf("%d\n", strncmp(str1, str2, 7));
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:33:09 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/10 14:18:52 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/11 17:49:57 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,24 @@
 	calloc returns.
 */
 
-#include <stddef.h>
+#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t eltsize)
 {
+	char	*block;
+	size_t	i;
+	size_t	range;
 
+	i = 0;
+	range = count * eltsize;
+	block = malloc(range);
+	if (!block)
+		return(0);
+	while(i <= range)
+	{
+		block[i] = 0;
+		i++;
+	}
+	return((void*)block);
 }
+

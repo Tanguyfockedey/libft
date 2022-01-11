@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:33:22 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/10 14:38:16 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/11 15:23:24 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,49 @@
 	the new string.
 */
 
+#include <stdlib.h>
+//#include "libft.h"
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
 char	*ft_strdup(const char *s)
 {
+	char	*dest;
+	size_t	length;
+	size_t	i;
 
+	length = ft_strlen(s);
+	dest = malloc((length + 1) * sizeof(char));
+	if (!dest)
+		return (0);
+	i = 0;
+	while (i < length)
+	{
+		dest[i] = s[i];
+		i++;
+	}
+	dest[length] = '\0';
+	return (dest);
+}
+
+
+#include <stdio.h>
+int	main(void)
+{
+	char *str = "This is a string";
+	char *str2;
+
+	str2 = ft_strdup(str);
+	printf("%s\n%s\n", str, str2);
+	//printf("%s\n", ft_strdup(""));
+	//printf("%s\n", ft_strdup("this is\0 a test"));
+	free(str2);
 }
