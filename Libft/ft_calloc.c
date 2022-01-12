@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:33:09 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/11 17:49:57 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/12 14:12:31 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ void	*ft_calloc(size_t count, size_t eltsize)
 	}
 	return((void*)block);
 }
-
