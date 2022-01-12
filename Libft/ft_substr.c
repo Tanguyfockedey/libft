@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:13:17 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/12 14:56:42 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/12 15:09:31 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,14 @@ char	*ft_substr(const char *str, size_t start, size_t len)
 	return(substr);
 }
 
-/*
+
 #include <stdio.h>
 int	main(void)
 {
 	char	*str = "This is a sting !";
 	char	*substr;
 
-	substr = ft_substr(str, 5, 20);
+	substr = ft_substr(str, 1, 5);
 	printf("%s\n%s\n", str, substr);
 	free(substr);
 }
-*/
