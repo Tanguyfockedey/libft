@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:32:41 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/11 17:53:50 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/14 14:29:50 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include <stddef.h>
 
-char	*ft_prestr(char *str, char *sign)
+static char	*ft_prestr(char *str, char *sign)
 {
 	size_t	i;
 
