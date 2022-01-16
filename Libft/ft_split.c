@@ -34,10 +34,11 @@ static size_t	ft_substr_count(const char *s, char c)
 	return(count + 1);
 }
 
-static char	*ft_allocate_substr(char *result, char *s, char c)
+static char	*ft_allocate_substr(char *s, char c)
 {
 	size_t	i;
 	size_t	j;
+	char	*result;
 
 	i = 0;
 	while((s[i] != c) && (s[i] != '\0'))
@@ -52,7 +53,7 @@ static char	*ft_allocate_substr(char *result, char *s, char c)
 		j++;
 	}
 	result[j] = '\0';
-	return(&s[i + 1]);
+	return(result);
 }
 
 char	**ft_split(const char *s, char c)
@@ -70,10 +71,10 @@ char	**ft_split(const char *s, char c)
 	i = 0;
 	while(i < substr_count)
 	{
-		temp = ft_allocate_substr(result[i], temp, c);
+		result[i] = ft_allocate_substr(temp, c);
 		i++;
 	}
-	result[substr_count] = 0;
+	*result[substr_count] = 0;
 	return(result);
 }
 
@@ -91,6 +92,7 @@ int	main(void)
 	{
 		printf("%s\n", output[i]);
 		free(output[i]);
+		i++;
 	}
 	free(output[i]);
 	free(output);
