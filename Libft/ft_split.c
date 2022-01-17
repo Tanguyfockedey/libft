@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/14 14:24:26 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/14 14:24:26 by tfockede         ###   ########.fr       */
+/*   Created: 2022/01/17 15:38:52 by tfockede          #+#    #+#             */
+/*   Updated: 2022/01/17 15:38:52 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,55 +15,72 @@
 	the character ’c’ as a delimiter. 
 	The array must be ended by a NULL pointer.
 */
-
+#include <stdio.h>
 #include <stdlib.h>
 
 static size_t	ft_substr_count(const char *s, char c)
 {
-	size_t	i;
-	size_t	count;
-	
-	i = 0;
+	size_t count;
+
 	count = 0;
-	while(s[i] != '\0')
+	while(*s)
 	{
-		if(s[i] == c)
+		if(*s++ == c)
 			count++;
-		i++;
 	}
 	return(count + 1);
 }
 
-static char	*ft_allocate_substr(char *s, char c)
+static size_t	ft_substr_len(const char *s, char c)
 {
 	size_t	i;
-	size_t	j;
-	char	*result;
 
 	i = 0;
 	while((s[i] != c) && (s[i] != '\0'))
-		i++;
-	result = malloc((i + 1) * sizeof(char));
-	if(!result)
-		return(0);
-	j = 0;
-	while(j < i)
 	{
-		result[j] = s[j];
-		j++;
+		i++;
 	}
-	result[j] = '\0';
-	return(result);
+	return(i);
 }
+
+static void	*ft_free(char **result, size_t i)
+{
+	while(i-- > 0)
+	{
+		free(result[i]);
+	}
+	free(result);
+	return(0);
+}
+
+static char	*ft_substr(const char *str, size_t start, size_t len)
+{
+	char	*substr;
+	size_t	i;
+
+	i = 0;
+	substr = malloc((len + 1) * sizeof(char));
+	if(!substr)
+		return(0);
+	while(i < len)
+	{
+		substr[i] = str[start + i];
+		if(substr[i] == '\0')
+			break;
+		i++;
+	}
+	substr[i] = '\0';
+	return(substr);
+}
+
 
 char	**ft_split(const char *s, char c)
 {
-	char	**result;
-	char	*temp;
+	char **result;
 	size_t	substr_count;
+	size_t	substr_len;
 	size_t	i;
 
-	temp = (char*)s;
 	substr_count = ft_substr_count(s, c);
 	result = malloc((substr_count + 1) * sizeof(char *));
 	if(!result)
@@ -71,29 +88,31 @@ char	**ft_split(const char *s, char c)
 	i = 0;
 	while(i < substr_count)
 	{
-		result[i] = ft_allocate_substr(temp, c);
+		substr_len = ft_substr_len(s, c);
+		result[i] = ft_substr(s, 0, substr_len);
+		if(!result[i])
+			return(ft_free(result, i));
+		s = &s[substr_len + 1];
 		i++;
 	}
-	*result[substr_count] = 0;
+	result[substr_count] = NULL;
 	return(result);
 }
 
 
-#include <stdio.h>
 int	main(void)
 {
-	char *str = "abc/def/ghi/jkl";
+	char *str = "/abc/def/ghi/jkl";
 	char c = '/';
 	char **output;
-	int	i = 0;
+	int i = 0;
 
 	output = ft_split(str, c);
-	while(output[i])
+	while(output[i] != 0)
 	{
 		printf("%s\n", output[i]);
 		free(output[i]);
 		i++;
 	}
-	free(output[i]);
 	free(output);
 }
