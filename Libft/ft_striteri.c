@@ -37,7 +37,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	strlen = ft_strlen(s);
 	while(i < strlen)
 	{
-		f(i, s);
+		(*f)(i, s);
 		s++;
 		i++;
 	}

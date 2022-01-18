@@ -41,7 +41,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 		return(0);
 	while(i < strlen)
 	{
-		string[i] = f(i, s[i]);
+		string[i] = (*f)(i, s[i]);
 		i++;
 	}
 	string[strlen] = '\0';
@@ -61,7 +61,7 @@ int main(void)
 {
 	char	*str1 = "abc";
 	char	*str2;
-	
+
 	str2 = ft_strmapi(str1, *f);
 	printf("%s\n", str2);
 	free(str2);
