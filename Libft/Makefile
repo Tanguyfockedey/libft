@@ -11,5 +11,5 @@
 # **************************************************************************** #
 
 NAME	= libft.a
-CFLAGS	= -Werror -Wall -Wextra -fsanitize=adress
+CFLAGS	= -Werror -Wall -Wextra
 FILES	= 
