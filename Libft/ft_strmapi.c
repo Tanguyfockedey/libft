@@ -61,6 +61,7 @@ int main(void)
 {
 	char	*str1 = "abc";
 	char	*str2;
+	
 	str2 = ft_strmapi(str1, *f);
 	printf("%s\n", str2);
 	free(str2);
