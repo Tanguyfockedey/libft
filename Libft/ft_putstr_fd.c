@@ -1,37 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/18 17:35:27 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/18 17:35:27 by tfockede         ###   ########.fr       */
+/*   Created: 2022/01/19 14:42:05 by tfockede          #+#    #+#             */
+/*   Updated: 2022/01/19 14:42:05 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	Outputs the character ’c’ to the given file descriptor.
+	Outputs the string ’s’ to the given file descriptor.
 */
+
+#include <stddef.h>
+
+static size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 
 #include <unistd.h>
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	write(fd, s, ft_strlen(s));
 }
 
-/*
+
 #include <fcntl.h>
 #include <stdio.h>
 int	main(void)
 {
 	int fd;
-	char c = 'Z';
+	char *s = "This is a string !";
 
-	fd = open("test.txt", O_RDWR | O_CREAT, S_IRWXO);
-	printf("%d\n", fd);
-	ft_putchar_fd(c, fd);
+	fd = open("test.txt", O_RDWR | O_CREAT, S_IRWXU);
+	printf("File descriptor is : %d\nString is : %s\n", fd, s);
+	ft_putstr_fd(s, fd);
 	close(fd);
 }
-*/

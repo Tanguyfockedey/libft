@@ -1,1 +1,1 @@
-Z
+This is a string !
