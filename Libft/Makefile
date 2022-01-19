@@ -11,5 +11,25 @@
 # **************************************************************************** #
 
 NAME	= libft.a
-CFLAGS	= -Werror -Wall -Wextra
-FILES	= 
+FLAGS	= -Werror -Wall -Wextra
+FILES	= *.c
+
+OBJ		=  $(FILES:.c=.o)
+
+%.o: %.c
+	gcc $(FLAGS) -c $< -o $@
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	ar -rc $(NAME) $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+fclean:
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re

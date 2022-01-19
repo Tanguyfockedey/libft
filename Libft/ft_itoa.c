@@ -61,7 +61,7 @@ char	*ft_itoa(int n)
 	return(string);
 }
 
-
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -72,3 +72,4 @@ int main(void)
 	printf("%s\n", string);
 	free(string);
 }
+*/
