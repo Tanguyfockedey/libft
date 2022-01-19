@@ -39,7 +39,7 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putchar('0' + unb, fd);
 }
 
-
+/*
 #include <fcntl.h>
 #include <stdio.h>
 int	main(void)
@@ -59,3 +59,4 @@ int	main(void)
 	} 
 	close(fd);
 }
+*/
