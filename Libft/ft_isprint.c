@@ -21,15 +21,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int c = '0';
-	int	i;
-
-	i = ft_isprint(c);
-	printf("%d\n", i);
-}
-*/

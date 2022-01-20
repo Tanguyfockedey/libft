@@ -22,13 +22,13 @@
 
 int	ft_memcmp(const void *a1, const void *a2, size_t size)
 {
-	size_t	i;
-	int		equals;
-	char	*s1;
-	char	*s2;
+	size_t			i;
+	int				equals;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
-	s1 = (char*)a1;
-	s2 = (char*)a2;
+	s1 = (unsigned char*)a1;
+	s2 = (unsigned char*)a2;
 	i = 0;
 	if (size < 1)
 		return (0);
@@ -42,16 +42,3 @@ int	ft_memcmp(const void *a1, const void *a2, size_t size)
 	equals = s1[i] - s2[i];
 	return (equals);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	str1[] = "This iz a test";
-	char	str2[] = "This is a test";
-
-	printf("%d\n", ft_memcmp(str1, str2, 7));
-	printf("%d\n", strncmp(str1, str2, 7));
-}
-*/

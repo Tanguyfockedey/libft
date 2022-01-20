@@ -60,16 +60,3 @@ char	*ft_itoa(int n)
 		string[0] = '-';
 	return(string);
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-	int i = 2147483647;
-	char *string;
-
-	string = ft_itoa(i);
-	printf("%s\n", string);
-	free(string);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:32:41 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/14 14:29:50 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/20 15:35:51 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,3 @@ int	ft_atoi(const char *string)
 	}
 	return (sign * unb);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char str[] = "\n	+--+-2147483648.test";
-
-	printf("%s\n%d\n", str, ft_atoi(str));
-}
-*/

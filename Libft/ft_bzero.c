@@ -19,25 +19,13 @@
 
 void	ft_bzero(void *block, size_t size)
 {
-	unsigned char	*ptr;
+	char	*ptr;
 	size_t	i;
 
 	i = 0;
-	ptr = block;
+	ptr = (char*)block;
 	while(size-- > 0)
 	{
-		ptr[i++] = '0';
+		ptr[i++] = 0;
 	}
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-	char str[] = "This is a string to be erased !\n";
-
-	printf("%s", str);
-	ft_bzero(str, 20);
-	printf("%s", str);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:46:09 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/10 14:21:30 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/20 16:24:00 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int c = 'A';
-	int	i;
-
-	i = ft_isalpha(c);
-	printf("%d\n", i);
-}
-*/

@@ -22,15 +22,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int c = '!';
-	int	i;
-
-	i = ft_isalnum(c);
-	printf("%d\n", i);
-}
-*/
