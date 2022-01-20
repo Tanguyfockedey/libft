@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:57:05 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/12 15:47:36 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/20 17:27:08 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,8 @@
 	concatenation of ’s1’ and ’s2’.
 */
 
+#include "libft.h"
 #include <stdlib.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {

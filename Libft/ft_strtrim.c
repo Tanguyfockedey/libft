@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:48:03 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/14 14:21:45 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/20 17:46:07 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,8 @@
 	removed from the beginning and the end of the string.
 */
 
+#include "libft.h"
 #include <stdlib.h>
-
-static size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 static size_t	ft_pretrim(const char *str, const char *set)
 {

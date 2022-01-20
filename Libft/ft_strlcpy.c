@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 18:19:58 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/10 14:47:56 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/20 17:34:41 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,8 @@
 	than 0).
 */
 
+#include "libft.h"
 #include <stddef.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:31:45 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/11 13:45:45 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/20 17:37:45 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t size)
 		return (0);
 	while (s1[i] != '\0' && i < size - 1)
 	{
-		equals = s1[i] - s2[i];
+		equals = (unsigned char)s1[i] - (unsigned char)s2[i];
 		if (equals != 0)
 			return (equals);
 		i++;
 	}
-	equals = s1[i] - s2[i];
+	equals = (unsigned char)s1[i] - (unsigned char)s2[i];
 	return (equals);
 }
 

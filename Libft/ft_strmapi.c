@@ -16,17 +16,8 @@
 	from successive applications of ’f’.
 */
 
+#include "libft.h"
 #include <stdlib.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
@@ -48,6 +39,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	return(string);
 }
 
+
+/*
 #include <stdio.h>
 char f(unsigned int i, char c)
 {
@@ -66,3 +59,4 @@ int main(void)
 	printf("%s\n", str2);
 	free(str2);
 }
+*/

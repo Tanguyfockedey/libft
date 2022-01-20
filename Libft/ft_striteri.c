@@ -16,33 +16,23 @@
 	address to f to be modified if necessary.
 */
 
+#include "libft.h"
 #include <stddef.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t i;
-	size_t strlen;
+	size_t len;
 
 	i = 0;
-	strlen = ft_strlen(s);
-	while(i < strlen)
+	len = ft_strlen(s);
+	while(i < len)
 	{
 		(*f)(i, s);
 		s++;
 		i++;
 	}
 }
-
 
 /*
 #include <stdio.h>

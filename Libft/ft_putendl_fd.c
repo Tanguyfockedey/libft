@@ -14,18 +14,7 @@
 	Outputs the string ’s’ to the given file descriptor, followed by a newline.
 */
 
-#include <stddef.h>
-
-static size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
+#include "libft.h"
 #include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)

@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 #include "libft.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //contains malloc and size_t
+//#include <stddef.h> //contains malloc
 
 int	main(void)
 {
@@ -103,4 +104,18 @@ int	main(void)
 		printf("memcmp		NOK\n");
 	
 	//test memcpy
+
+
+
+	//test strjoin
+	char	*strjoin1 = "a1 ";
+	char	*strjoin2 = "b2"; 
+	char	*outputjoin;
+
+	outputjoin = ft_strjoin(strjoin1, strjoin2);
+	if((outputjoin[4] == '2') && !outputjoin[5])
+		printf("strjoin		OK\n");
+	else
+		printf("strjoin		NOK\n");
+	free(outputjoin);
 }

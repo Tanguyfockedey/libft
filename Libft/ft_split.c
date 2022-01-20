@@ -15,7 +15,7 @@
 	the character ’c’ as a delimiter. 
 	The array must be ended by a NULL pointer.
 */
-#include <stdio.h>
+
 #include <stdlib.h>
 
 static size_t	ft_substr_count(const char *s, char c)
@@ -73,7 +73,6 @@ static char	*ft_substr(const char *str, size_t start, size_t len)
 	return(substr);
 }
 
-
 char	**ft_split(const char *s, char c)
 {
 	char **result;
@@ -99,7 +98,8 @@ char	**ft_split(const char *s, char c)
 	return(result);
 }
 
-
+/*
+#include <stdio.h>
 int	main(void)
 {
 	char *str = "/abc/def/ghi/jkl";
@@ -116,3 +116,4 @@ int	main(void)
 	}
 	free(output);
 }
+*/

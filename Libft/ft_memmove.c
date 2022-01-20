@@ -18,7 +18,7 @@
 	The value returned by memmove is the value of to.
 */
 
-#include <stdlib.h> //contains malloc and size_t
+#include <stdlib.h> 
 
 void	*ft_memmove(void *to, const void *from, size_t size)
 {

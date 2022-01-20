@@ -52,6 +52,8 @@ OBJ		=  $(FILES:.c=.o)
 %.o: %.c
 	gcc $(FLAGS) -c $< -o $@
 
+re: fclean all clean
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -62,7 +64,5 @@ clean:
 
 fclean:
 	rm -f $(NAME)
-
-re: fclean all
 
 .PHONY: all clean fclean re

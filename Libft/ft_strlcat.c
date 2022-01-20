@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 10:39:17 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/10 14:44:59 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/20 17:27:50 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,8 @@
 	at least one byte free in dst). 
 */
 
+#include "libft.h"
 #include <stddef.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
