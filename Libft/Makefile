@@ -47,20 +47,36 @@ FILES	=	ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c 
 			
-OBJ		=  $(FILES:.c=.o)
+B_FILES	=	ft_lstnew.c \
+#			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
+
+
+OBJ		= $(FILES:.c=.o)
+
+B_OBJ	= $(B_FILES:.c=.o)
 
 %.o: %.c
-	gcc $(FLAGS) -c $< -o $@
+	@ gcc $(FLAGS) -c $< -o $@
 
 re: fclean all clean
 
-all: $(NAME)
+all: mandatory bonus
 
-$(NAME): $(OBJ)
+mandatory: $(OBJ)
 	ar -rc $(NAME) $(OBJ)
 
+bonus: $(B_OBJ)
+	ar -rc $(NAME) $(B_OBJ)
+
 clean:
-	rm -f $(OBJ)
+	@ rm -f $(OBJ) $(B_OBJ)
 
 fclean:
 	rm -f $(NAME)

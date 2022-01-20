@@ -16,7 +16,7 @@
 
 int	main(void)
 {
-	//test atoi
+//test atoi
 	int 	i = 0;
 	char	*atoi_str = "	-2147483648.ab4";
 	int		atoi_int = -2147483648;
@@ -27,7 +27,7 @@ int	main(void)
 	else
 		printf("atoi		NOK\n");
 
-	//test bzero
+//test bzero
 	char	bzero_str[] = "This is a string to erase\n";
 
 	ft_bzero(bzero_str, 25);
@@ -36,7 +36,7 @@ int	main(void)
 	else
 		printf("bzero		NOK\n");
 
-	//test calloc
+//test calloc
 	char	*calloc;
 
 	calloc = ft_calloc(2, 4);
@@ -46,37 +46,37 @@ int	main(void)
 		printf("calloc		NOK\n");
 	free(calloc);
 
-	//test isalnum
+//test isalnum
 	if(ft_isalnum('a') && ft_isalnum('0') && !ft_isalnum('!'))
 		printf("isalnum		OK\n");
 	else
 		printf("isalnum		NOK\n");
 
-	//test isalpha
+//test isalpha
 	if(ft_isalpha('a') && !ft_isalpha('0'))
 		printf("isalpha		OK\n");
 	else
 		printf("isalpha		NOK\n");
 
-	//test isascii
+//test isascii
 	if(ft_isascii(0) && ft_isascii(127) && !ft_isascii(128))
 		printf("isascii		OK\n");
 	else
 		printf("isascii		NOK\n");
 	
-	//test isdigit
+//test isdigit
 	if(ft_isdigit('0') && ft_isdigit('9') && !ft_isdigit(0))
 		printf("isdigit		OK\n");
 	else
 		printf("isdigit		NOK\n");
 	
-	//test isprint
+//test isprint
 	if(ft_isprint(' ') && ft_isprint('~') && !ft_isprint(0) && !ft_isprint(128))
 		printf("isprint		OK\n");
 	else
 		printf("isprint		NOK\n");
 
-	//test itoa
+//test itoa
 	char	*itoa_str;
 	
 	i = -2147483648;
@@ -87,7 +87,7 @@ int	main(void)
 		printf("itoa		NOK\n");
 	free(itoa_str);
 
-	//test memchr
+//test memchr
 	char	*memchr = "Stringr";
 
 	if(ft_memchr(memchr, 'r', 7) == &memchr[2])
@@ -95,7 +95,7 @@ int	main(void)
 	else
 		printf("memchr		NOK\n");
 
-	//test memcmp
+//test memcmp
 	char	*memcmp1 = "test1";
 	char	*memcmp2 = "test2";
 	if(!ft_memcmp(memcmp1,memcmp2,4) && (ft_memcmp(memcmp1,memcmp2,5) < 0))
@@ -103,11 +103,11 @@ int	main(void)
 	else
 		printf("memcmp		NOK\n");
 	
-	//test memcpy
+//test memcpy
 
 
 
-	//test strjoin
+//test strjoin
 	char	*strjoin1 = "a1 ";
 	char	*strjoin2 = "b2"; 
 	char	*outputjoin;
@@ -118,4 +118,11 @@ int	main(void)
 	else
 		printf("strjoin		NOK\n");
 	free(outputjoin);
+
+//test lstnew
+	t_list *str_list;
+
+	str_list = ft_lstnew("42");
+	printf("%s\n%p\n", (char*)str_list->content, str_list->next);
+	free(str_list);
 }
