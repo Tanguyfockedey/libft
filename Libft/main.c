@@ -105,7 +105,17 @@ int	main(void)
 	
 //test memcpy
 
+//test strchr
+	char	str[] = "This is the string to search";
+	int	to_find = 'g';
+	char	*result;
 
+	result = ft_strchr(str, to_find);
+	printf("Strchr\n%s\n%d\n%s\n", str, to_find, result);
+
+//test strrchr
+	result = ft_strrchr(str, to_find);
+	printf("Strtchr\nTo search: %s\nTo find: %d\nResult: %s\n", str, to_find, result);
 
 //test strjoin
 	char	*strjoin1 = "a1 ";
@@ -121,8 +131,8 @@ int	main(void)
 
 //test lstnew
 	t_list *str_list;
-
-	str_list = ft_lstnew("42");
-	printf("%s\n%p\n", (char*)str_list->content, str_list->next);
+	i = 123;
+	str_list = ft_lstnew(&i);
+	printf("%d\n%p\n", *(int*)str_list->content, str_list->next);
 	free(str_list);
 }
