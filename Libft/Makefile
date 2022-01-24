@@ -48,13 +48,13 @@ FILES	=	ft_isalpha.c \
 			ft_putnbr_fd.c 
 			
 B_FILES	=	ft_lstnew.c \
-#			ft_lstadd_front.c \
+			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
-			ft_lstiter.c \
+#			ft_lstiter.c \
 			ft_lstmap.c \
 
 
@@ -68,12 +68,19 @@ B_OBJ	= $(B_FILES:.c=.o)
 re: fclean all clean
 
 all: mandatory bonus
+	@ echo create libft.a : mandatory + bonus
+
 
 mandatory: $(OBJ)
-	ar -rc $(NAME) $(OBJ)
+	@ ar -rc $(NAME) $(OBJ)
 
 bonus: $(B_OBJ)
-	ar -rc $(NAME) $(B_OBJ)
+	@ ar -rc $(NAME) $(B_OBJ)
+
+main:
+	gcc $(FLAGS) main.c libft.a
+	./a.out
+	rm -f a.out
 
 clean:
 	@ rm -f $(OBJ) $(B_OBJ)
