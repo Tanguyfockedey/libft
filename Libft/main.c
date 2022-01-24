@@ -14,6 +14,8 @@
 #include <stdlib.h> //contains malloc and size_t
 //#include <stddef.h> //contains malloc
 
+
+
 int	main(void)
 {
 //test atoi
@@ -131,8 +133,45 @@ int	main(void)
 
 //test lstnew
 	t_list *str_list;
+
 	i = 123;
 	str_list = ft_lstnew(&i);
-	printf("%d\n%p\n", *(int*)str_list->content, str_list->next);
+	printf("\nList tests:\n\n%d\n%p\n", *(int*)str_list->content, str_list->next);
 	free(str_list);
+
+//test lstadd_front + lstsize
+	t_list *n1 = ft_lstnew("1");
+	t_list *n2 = ft_lstnew("2");
+	t_list *n3 = ft_lstnew("3");
+	t_list	*l;
+
+	ft_lstadd_front(&n1, n2);
+	ft_lstadd_front(&n1, n3);
+	l = n1;
+	printf("list length: %d\n", ft_lstsize(l));
+	while(l)
+		{
+			printf("%s --> ", (char*)l->content);
+			l = l->next;
+		}
+	printf("%p\n", l);
+
+//lstlast
+	l = n1;
+	printf("last element: %s\n", (char*)ft_lstlast(l)->content);
+
+//lstadd_back
+	t_list *n4 = ft_lstnew("4");
+
+	ft_lstadd_back(&n1, n4);
+	while(l)
+		{
+			printf("%s --> ", (char*)l->content);
+			l = l->next;
+		}
+	printf("%p\n\n", l);
+/*
+//lstclear
+	ft_lstclear(&n1, free);
+*/	
 }
