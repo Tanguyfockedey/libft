@@ -21,18 +21,18 @@
 void	*ft_memcpy(void *to, const void *from, size_t size)
 {
 	const char	*ptr1;
-	char	*ptr2;
-	size_t	i;
+	char		*ptr2;
+	size_t		i;
 
 	i = 0;
 	ptr2 = to;
 	ptr1 = from;
-	while(i < size)
+	while (i < size)
 	{
 		ptr2[i] = ptr1[i];
 		i++;
 	}
-	return(to);
+	return (to);
 }
 
 /*

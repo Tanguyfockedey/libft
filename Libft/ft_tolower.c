@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:30:38 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/10 15:03:08 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/25 14:33:36 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return(c + 32);
-	return(c);
+		return (c + 32);
+	return (c);
 }
 
 /*

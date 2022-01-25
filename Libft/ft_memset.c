@@ -25,7 +25,7 @@ void	*ft_memset(void *block, int c, size_t size)
 
 	i = 0;
 	ptr = block;
-	while(size-- > 0)
+	while (size-- > 0)
 	{
 		ptr[i++] = c;
 	}

@@ -24,9 +24,9 @@ t_list	*ft_lstnew(void *content)
 	t_list	*cell;
 
 	cell = malloc(sizeof(t_list));
-	if(!cell)
-		return(0);
+	if (!cell)
+		return (0);
 	cell->content = content;
 	cell->next = 0;
-	return(cell);
+	return (cell);
 }

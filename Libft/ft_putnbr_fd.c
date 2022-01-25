@@ -31,7 +31,7 @@ void	ft_putnbr_fd(int n, int fd)
 		unb = -n;
 	else
 		unb = n;
-	if(unb > 9)
+	if (unb > 9)
 	{
 		ft_putnbr_fd(unb / 10, fd);
 		unb = unb % 10;

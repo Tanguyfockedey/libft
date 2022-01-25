@@ -23,8 +23,8 @@ void	ft_bzero(void *block, size_t size)
 	size_t	i;
 
 	i = 0;
-	ptr = (char*)block;
-	while(size-- > 0)
+	ptr = (char *)block;
+	while (size-- > 0)
 	{
 		ptr[i++] = 0;
 	}

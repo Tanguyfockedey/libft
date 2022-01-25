@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:33:09 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/14 14:30:06 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/25 14:51:03 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void	*ft_calloc(size_t count, size_t eltsize)
 	range = count * eltsize;
 	block = malloc(range);
 	if (!block)
-		return(0);
-	while(i <= range)
+		return (0);
+	while (i <= range)
 	{
 		block[i] = 0;
 		i++;
 	}
-	return((void*)block);
+	return ((void *)block);
 }

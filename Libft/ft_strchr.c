@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:22:33 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/21 15:35:34 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/25 14:39:23 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ char	*ft_strchr(const char *str, int c)
 	size_t	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if((char)c == str[i])
-			return((char*)&str[i]);
+		if ((char)c == str[i])
+			return ((char *)&str[i]);
 		i++;
 	}
-	if((char)c == 0)
-		return((char*)&str[i]);
-	return(0);
+	if ((char)c == 0)
+		return ((char *)&str[i]);
+	return (0);
 }

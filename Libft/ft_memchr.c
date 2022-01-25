@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:32:05 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/21 15:50:44 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/25 14:44:12 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ void	*ft_memchr(const void *block, int c, size_t size)
 	char	*mem;
 	size_t	i;
 
-	mem = (char*)block;
+	mem = (char *)block;
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
-		if((char)c == mem[i])
-			return(&mem[i]);
+		if ((char)c == mem[i])
+			return (&mem[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }

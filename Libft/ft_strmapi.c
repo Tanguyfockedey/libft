@@ -22,23 +22,22 @@
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
-	size_t 	strlen;
+	size_t	strlen;
 	char	*string;
 
 	i = 0;
 	strlen = ft_strlen(s);
 	string = malloc((strlen + 1) * sizeof(char));
-	if(!string)
-		return(0);
-	while(i < strlen)
+	if (!string)
+		return (0);
+	while (i < strlen)
 	{
 		string[i] = (*f)(i, s[i]);
 		i++;
 	}
 	string[strlen] = '\0';
-	return(string);
+	return (string);
 }
-
 
 /*
 #include <stdio.h>

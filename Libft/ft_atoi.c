@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:32:41 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/20 15:35:51 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/25 14:51:47 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *string)
 	size_t			unb;
 	size_t			mult10;
 
-	str = (char*) string;
+	str = (char *) string;
 	i = 0;
 	unb = 0;
 	mult10 = 1;

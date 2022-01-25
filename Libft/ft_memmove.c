@@ -23,29 +23,29 @@
 void	*ft_memmove(void *to, const void *from, size_t size)
 {
 	const char	*ptr1;
-	char	*ptr2;
-	char	*temp;
-	size_t	i;
+	char		*ptr2;
+	char		*temp;
+	size_t		i;
 
 	ptr1 = from;
 	ptr2 = to;
 	temp = malloc(sizeof(char) * size);
-	if(!temp) 
-		return(0);
+	if (!temp)
+		return (0);
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
 		temp[i] = ptr1[i];
 		i++;
 	}
 	i = 0;
-	while(i < size)
+	while (i < size)
 	{
 		ptr2[i] = temp[i];
 		i++;
 	}
 	free(temp);
-	return(to);
+	return (to);
 }
 
 /*

@@ -27,8 +27,8 @@ int	ft_memcmp(const void *a1, const void *a2, size_t size)
 	unsigned char	*s1;
 	unsigned char	*s2;
 
-	s1 = (unsigned char*)a1;
-	s2 = (unsigned char*)a2;
+	s1 = (unsigned char *)a1;
+	s2 = (unsigned char *)a2;
 	i = 0;
 	if (size < 1)
 		return (0);

@@ -24,17 +24,17 @@ static unsigned int	ft_intlen(int n)
 
 	intlen = 1;
 	un = n;
-	if(n < 0)
+	if (n < 0)
 	{
 		intlen++;
 		un = -n;
 	}
-	while(un > 9)
+	while (un > 9)
 	{
 		un /= 10;
 		intlen++;
 	}
-	return(intlen);
+	return (intlen);
 }
 
 char	*ft_itoa(int n)
@@ -44,19 +44,19 @@ char	*ft_itoa(int n)
 	unsigned int	un;
 
 	un = n;
-	if(n < 0)
+	if (n < 0)
 		un = -n;
 	intlen = ft_intlen(n);
 	string = malloc((intlen + 1) * sizeof(char));
-	if(!string)
-		return(0);
+	if (!string)
+		return (0);
 	string[intlen] = '\0';
-	while(intlen-- > 0)
+	while (intlen-- > 0)
 	{	
 		string[intlen] = '0' + un % 10;
 		un /= 10;
 	}
-	if(n < 0)
+	if (n < 0)
 		string[0] = '-';
-	return(string);
+	return (string);
 }

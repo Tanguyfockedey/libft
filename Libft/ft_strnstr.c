@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:32:29 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/21 19:03:05 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/25 14:36:57 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	if (little[0] == '\0')
-		return ((char*)big);
+		return ((char *)big);
 	i = 0;
 	while (big[i] && len > 0)
 	{
@@ -33,7 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (big[i + j] == little[j] && j <= len)
 		{
 			if (little[j + 1] == '\0')
-				return ((char*)&big[i]);
+				return ((char *)&big[i]);
 			j++;
 		}	
 		i++;
