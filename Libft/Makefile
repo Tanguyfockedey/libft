@@ -70,7 +70,6 @@ re: fclean all clean
 all: mandatory bonus
 	@ echo create libft.a : mandatory + bonus
 
-
 mandatory: $(OBJ)
 	@ ar -rc $(NAME) $(OBJ)
 
