@@ -140,38 +140,40 @@ int	main(void)
 	free(str_list);
 
 //test lstadd_front + lstsize
-	t_list *n1 = ft_lstnew("1");
-	t_list *n2 = ft_lstnew("2");
-	t_list *n3 = ft_lstnew("3");
-	t_list	*l;
+	t_list *n1 = ft_lstnew(malloc(1));
+	t_list *n2 = ft_lstnew(malloc(1));
+	t_list *n3 = ft_lstnew(malloc(1));
+	t_list	**l;
+	t_list	*i_list;
 
-	ft_lstadd_front(&n1, n2);
-	ft_lstadd_front(&n1, n3);
-	l = n1;
-	printf("list length: %d\n", ft_lstsize(l));
-	while(l)
+	l = &n1;
+	ft_lstadd_front(l, n2);
+	ft_lstadd_front(l, n3);
+	printf("list length: %d\n", ft_lstsize(*l));
+	i_list = *l;
+	while (i_list)
 		{
-			printf("%s --> ", (char*)l->content);
-			l = l->next;
+			printf("%s --> ", (char *)i_list->content);
+			i_list = i_list->next;
 		}
-	printf("%p\n", l);
+	printf("%p\n", i_list);
 
 //lstlast
-	l = n1;
-	printf("last element: %s\n", (char*)ft_lstlast(l)->content);
+	printf("last element: %s\n", (char*)ft_lstlast(*l)->content);
 
 //lstadd_back
-	t_list *n4 = ft_lstnew("4");
+	t_list *n4 = ft_lstnew(malloc(1));
 
-	ft_lstadd_back(&n1, n4);
-	while(l)
+	ft_lstadd_back(l, n4);
+	i_list = *l;
+	while(i_list)
 		{
-			printf("%s --> ", (char*)l->content);
-			l = l->next;
+			printf("%s --> ", (char*)i_list->content);
+			i_list = i_list->next;
 		}
-	printf("%p\n\n", l);
-/*
+	printf("%p\n\n", i_list);
+
 //lstclear
-	ft_lstclear(&n1, free);
-*/	
+	ft_lstclear(l, free);
+
 }

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/24 13:42:28 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/24 13:42:28 by tfockede         ###   ########.fr       */
+/*   Created: 2022/01/25 16:58:21 by tfockede          #+#    #+#             */
+/*   Updated: 2022/01/25 16:58:21 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	Adds the element ’new’ at the beginning of the list.
+	Iterates the list ’lst’ and applies the function ’f’ to the content of 
+	each element.
 */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	new->next = *lst;
-	*lst = new;
+	while (lst)
+	{
+		(*f)(lst->content);
+		lst = lst->next;
+	}
 }
