@@ -20,7 +20,7 @@ void *ft_void(void *content)
 }
 
 int	main(void)
-{
+{/*
 //test atoi
 	int 	i = 0;
 	char	*atoi_str = "	-2147483648.ab4";
@@ -133,61 +133,68 @@ int	main(void)
 	else
 		printf("strjoin		NOK\n");
 	free(outputjoin);
-
+*/
 //test lstnew
-	t_list *str_list;
+	t_list *n1 = ft_lstnew("a");
 
-	i = 123;
-	str_list = ft_lstnew(&i);
-	printf("\nList tests:\n\n%d\n%p\n", *(int*)str_list->content, str_list->next);
-	free(str_list);
+	printf("\nNew list:\n%s --> %p\n", (char *)n1->content, n1->next);
 
 //test lstadd_front + lstsize
-	t_list *n1 = ft_lstnew("1");
-	t_list *n2 = ft_lstnew("2");
-	t_list *n3 = ft_lstnew("3");
 	t_list	**l;
 	t_list	*i_list;
 
 	l = &n1;
-	ft_lstadd_front(l, n2);
-	ft_lstadd_front(l, n3);
-	printf("list length: %d\n", ft_lstsize(*l));
+	printf("Add front:\n");
+	ft_lstadd_front(l, ft_lstnew("b"));
+	ft_lstadd_front(l, ft_lstnew("c"));
 	i_list = *l;
 	while (i_list)
-		{
-			printf("%s --> ", (char *)i_list->content);
-			i_list = i_list->next;
-		}
+	{
+		printf("%s --> ", (char *)i_list->content);
+		i_list = i_list->next;
+	}
 	printf("%p\n", i_list);
-
-//lstlast
-	printf("last element: %s\n", (char *)ft_lstlast(*l)->content);
 
 //lstadd_back
-	t_list *n4 = ft_lstnew("4");
+	printf("Add back:\n");
+	ft_lstadd_back(l, ft_lstnew("D"));
+	ft_lstadd_back(l, ft_lstnew("E"));
 
-	ft_lstadd_back(l, n4);
 	i_list = *l;
 	while(i_list)
-		{
-			printf("%s --> ", (char *)i_list->content);
-			i_list = i_list->next;
-		}
+	{
+		printf("%s --> ", (char *)i_list->content);
+		i_list = i_list->next;
+	}
 	printf("%p\n\n", i_list);
 
-//lstclear
-//	ft_lstclear(l, free);
+//lstsize
+	printf("list length: %d\n", ft_lstsize(*l));
 
-	t_list *copy_l;
+//lstlast
+	printf("last element: %s\n\n", (char *)ft_lstlast(*l)->content);
 
-	copy_l = ft_lstmap(*l, ft_void, free);
-	i_list = copy_l;
-	while (i_list)
-		{
-			printf("%s --> ", (char *)i_list->content);
-			i_list = i_list->next;
-		}
-	printf("%p\n", i_list);
+//free
+	i_list = *l;
+	while(i_list)
+	{
+		n1 = i_list;
+		i_list = i_list->next;
+		free(n1);
+	}
+
+//lstdelone
+
+	
+	char *str_l = malloc(4 * sizeof(char));
+	str_l[0] = '1';
+	str_l[1] = '2';
+	str_l[2] = '3';
+	str_l[3] = '\0';
+
+	n1 = ft_lstnew(str_l);
+	printf("New list: %s\n", (char *)n1->content);
+	ft_lstdelone(n1, free);
+	// free(n1);
 
 }

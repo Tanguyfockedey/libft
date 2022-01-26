@@ -54,7 +54,7 @@ B_FILES	=	ft_lstnew.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
-			ft_lstiter.c \
+#			ft_lstiter.c \
 			ft_lstmap.c \
 
 
@@ -77,7 +77,7 @@ bonus: $(B_OBJ)
 	@ ar -rc $(NAME) $(B_OBJ)
 
 main:
-	gcc $(FLAGS) main.c libft.a
+	gcc $(FLAGS) -fsanitize=address main.c libft.a -g3
 	./a.out
 	rm -f a.out
 

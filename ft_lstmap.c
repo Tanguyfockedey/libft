@@ -25,6 +25,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*cell;
 	t_list	*list;
 	void	*data;
+	int i;
+
 
 	if (lst->next)
 		list = ft_lstmap(lst->next, f, del);
@@ -39,3 +41,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	ft_lstadd_back(&list, cell);
 	return (list);
 }
+
+/*
+parcourir chaque cellule jusqu'a la fin
+	créer une nouvelle cellule
+	créer une nouvelle zone méméoire data (malloc)
+	appliquer la fonction sur la nouvelle data
+	ajouter la cellule a la nouvelle liste
+*/
