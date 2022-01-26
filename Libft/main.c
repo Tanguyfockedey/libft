@@ -14,7 +14,10 @@
 #include <stdlib.h> //contains malloc and size_t
 //#include <stddef.h> //contains malloc
 
-
+void *ft_void(void *content)
+{
+	return (content);
+}
 
 int	main(void)
 {
@@ -140,9 +143,9 @@ int	main(void)
 	free(str_list);
 
 //test lstadd_front + lstsize
-	t_list *n1 = ft_lstnew(malloc(1));
-	t_list *n2 = ft_lstnew(malloc(1));
-	t_list *n3 = ft_lstnew(malloc(1));
+	t_list *n1 = ft_lstnew("1");
+	t_list *n2 = ft_lstnew("2");
+	t_list *n3 = ft_lstnew("3");
 	t_list	**l;
 	t_list	*i_list;
 
@@ -159,21 +162,32 @@ int	main(void)
 	printf("%p\n", i_list);
 
 //lstlast
-	printf("last element: %s\n", (char*)ft_lstlast(*l)->content);
+	printf("last element: %s\n", (char *)ft_lstlast(*l)->content);
 
 //lstadd_back
-	t_list *n4 = ft_lstnew(malloc(1));
+	t_list *n4 = ft_lstnew("4");
 
 	ft_lstadd_back(l, n4);
 	i_list = *l;
 	while(i_list)
 		{
-			printf("%s --> ", (char*)i_list->content);
+			printf("%s --> ", (char *)i_list->content);
 			i_list = i_list->next;
 		}
 	printf("%p\n\n", i_list);
 
 //lstclear
-	ft_lstclear(l, free);
+//	ft_lstclear(l, free);
+
+	t_list *copy_l;
+
+	copy_l = ft_lstmap(*l, ft_void, free);
+	i_list = copy_l;
+	while (i_list)
+		{
+			printf("%s --> ", (char *)i_list->content);
+			i_list = i_list->next;
+		}
+	printf("%p\n", i_list);
 
 }
