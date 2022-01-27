@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:13:17 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/25 14:34:28 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/27 15:13:41 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 	Allocates and returns a substring from the string ’s’.
 	The substring begins at index ’start’ and is of maximum size ’len’.
 */
-
+#include "libft.h"
 #include <stdlib.h>
 
 char	*ft_substr(const char *str, size_t start, size_t len)
@@ -23,17 +23,28 @@ char	*ft_substr(const char *str, size_t start, size_t len)
 	size_t	i;
 
 	i = 0;
-	substr = malloc((len + 1) * sizeof(char));
-	if (!substr)
-		return (0);
-	while (i < len)
+	if (len > ft_strlen(str))
+		len = ft_strlen(str);
+	if (start > ft_strlen(str))
 	{
-		substr[i] = str[start + i];
-		if (substr[i] == '\0')
-			break ;
-		i++;
+		substr = malloc(sizeof(char));
+		substr[0] = '\0';
 	}
-	substr[i] = '\0';
+	else
+	{
+		substr = malloc((len + 1) * sizeof(char));
+		if (!substr)
+			return (0);
+		
+		while (i < len)
+		{
+			substr[i] = str[start + i];
+			if (substr[i] == '\0')
+				break ;
+			i++;
+		}
+		substr[i] = '\0';
+	}
 	return (substr);
 }
 
@@ -41,11 +52,11 @@ char	*ft_substr(const char *str, size_t start, size_t len)
 #include <stdio.h>
 int	main(void)
 {
-	char	*str = "This is a sting !";
+//	char	*str = "This is a sting !";
 	char	*substr;
 
-	substr = ft_substr(str, 1, 5);
-	printf("%s\n%s\n", str, substr);
+	substr = ft_substr("tripouille", 100, 1);
+	// printf("%s\n%s\n", str, substr);
 	free(substr);
 }
 */
