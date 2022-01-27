@@ -54,7 +54,7 @@ B_FILES	=	ft_lstnew.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
-#			ft_lstiter.c \
+			ft_lstiter.c \
 			ft_lstmap.c \
 
 
@@ -65,7 +65,7 @@ B_OBJ	= $(B_FILES:.c=.o)
 %.o: %.c
 	@ gcc $(FLAGS) -c $< -o $@
 
-re: fclean all clean
+re: fclean all
 
 all: mandatory bonus
 	@ echo create libft.a : mandatory + bonus
