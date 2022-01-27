@@ -23,23 +23,20 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*cell;
-	t_list	*list;
-	void	*data;
-	int i;
+	t_list	*newlist;
 
-
+	if (!lst)
+		return (0);
 	if (lst->next)
-		list = ft_lstmap(lst->next, f, del);
-	data = malloc(sizeof((lst->content)));
-	if (!data)
+		newlist = ft_lstmap(lst->next, f, del);
+	cell = ft_lstnew((*f)(lst->content));
+	if (!cell)
 	{
-		ft_lstclear(&list->next, del);
+		ft_lstclear(&newlist, del);
 		return (0);
 	}
-	cell = ft_lstnew(data);
-	cell->content = (*f)(lst->content);
-	ft_lstadd_back(&list, cell);
-	return (list);
+	ft_lstadd_front(&newlist, cell);
+	return (newlist);
 }
 
 /*

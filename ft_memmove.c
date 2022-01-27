@@ -17,34 +17,23 @@
 	including those bytes which also belong to the block at to.
 	The value returned by memmove is the value of to.
 */
-
+#include "libft.h"
 #include <stdlib.h> 
 
 void	*ft_memmove(void *to, const void *from, size_t size)
 {
-	const char	*ptr1;
-	char		*ptr2;
-	char		*temp;
-	size_t		i;
+	char	*tmp_to;
+	char	*tmp_from;
 
-	ptr1 = from;
-	ptr2 = to;
-	temp = malloc(sizeof(char) * size);
-	if (!temp)
-		return (0);
-	i = 0;
-	while (i < size)
+	tmp_to = (char *) to;
+	tmp_from = (char *) from;
+	if (to < from)
+		to = ft_memcpy(to, from, size);
+	else
 	{
-		temp[i] = ptr1[i];
-		i++;
+		while (size--)
+			tmp_to[size] = tmp_from[size];
 	}
-	i = 0;
-	while (i < size)
-	{
-		ptr2[i] = temp[i];
-		i++;
-	}
-	free(temp);
 	return (to);
 }
 

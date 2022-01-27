@@ -20,16 +20,16 @@
 
 void	*ft_memcpy(void *to, const void *from, size_t size)
 {
-	const char	*ptr1;
-	char		*ptr2;
-	size_t		i;
+	char	*tmp_from;
+	char	*tmp_to;
+	size_t	i;
 
 	i = 0;
-	ptr2 = to;
-	ptr1 = from;
+	tmp_to = (char *) to;
+	tmp_from = (char *) from;
 	while (i < size)
 	{
-		ptr2[i] = ptr1[i];
+		tmp_to[i] = tmp_from[i];
 		i++;
 	}
 	return (to);
