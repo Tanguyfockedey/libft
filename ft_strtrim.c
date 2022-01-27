@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:48:03 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/27 15:39:45 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/27 18:52:29 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	if (pretrim + endtrim > len)
 		string = ft_copy(s1, 0);
 	else
-		string = ft_copy(&s1[pretrim], len - pretrim - endtrim);		
+		string = ft_copy(&s1[pretrim], len - pretrim - endtrim);
 	return (string);
 }
 
