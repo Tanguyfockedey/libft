@@ -65,7 +65,7 @@ B_OBJ	= $(B_FILES:.c=.o)
 %.o: %.c
 	@ gcc $(FLAGS) -c $< -o $@
 
-re: fclean all
+re: fclean all clean
 
 all: mandatory bonus
 	@ echo create libft.a : mandatory + bonus
