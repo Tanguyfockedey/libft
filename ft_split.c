@@ -30,7 +30,7 @@ static size_t	ft_substr_count(const char *s, char c)
 		return (1);
 	if ((c == '\0') && !s[0])
 		return (0);
-	while(s[i] == c)
+	while (s[i] == c)
 		i++;
 	while (s[i])
 	{
@@ -52,7 +52,7 @@ static char	*ft_next_substr(const char *s, char c, size_t *str_index)
 	s = &s[*str_index];
 	str_start = 0;
 	str_len = 0;
-	while(s[str_start] == c)
+	while (s[str_start] == c)
 		str_start++;
 	while ((s[str_start + str_len] != c) && (s[str_start + str_len] != '\0'))
 		str_len++;
