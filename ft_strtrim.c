@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:48:03 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/25 14:35:48 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/27 15:39:45 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,13 @@ static size_t	ft_pretrim(const char *str, const char *set)
 	return (j);
 }
 
-static size_t	ft_endtrim(const char*str, const char *set, size_t len)
+static size_t	ft_endtrim(const char *str, const char *set)
 {
 	size_t	i;
 	size_t	j;
+	size_t	len;
 
+	len = ft_strlen(str);
 	i = 0;
 	j = len;
 	while (set[i])
@@ -58,27 +60,38 @@ static size_t	ft_endtrim(const char*str, const char *set, size_t len)
 	return (len - j);
 }
 
+static char	*ft_copy(const char *str, size_t len)
+{
+	char	*string;
+	size_t	i;
+
+	string = malloc((len + 1) * sizeof(char));
+	if (!string)
+		return (0);
+	i = 0;
+	while (i < (len))
+	{
+		string[i] = str[i];
+		i++;
+	}
+	string[i] = '\0';
+	return (string);
+}
+
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*string;
 	size_t	pretrim;
 	size_t	endtrim;
 	size_t	len;
-	size_t	i;
 
 	len = ft_strlen(s1);
 	pretrim = ft_pretrim(s1, set);
-	endtrim = ft_endtrim(s1, set, len);
-	string = malloc((len - pretrim - endtrim + 1) * sizeof(char));
-	if (!string)
-		return (0);
-	i = 0;
-	while (i < (len - pretrim - endtrim))
-	{
-		string[i] = s1[pretrim + i];
-		i++;
-	}
-	string[i] = '\0';
+	endtrim = ft_endtrim(s1, set);
+	if (pretrim + endtrim > len)
+		string = ft_copy(s1, 0);
+	else
+		string = ft_copy(&s1[pretrim], len - pretrim - endtrim);		
 	return (string);
 }
 
