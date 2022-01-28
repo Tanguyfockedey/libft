@@ -65,7 +65,7 @@ B_OBJ	= $(B_FILES:.c=.o)
 %.o: %.c
 	@ gcc $(FLAGS) -c $< -o $@
 
-re: fclean all clean
+re: fclean all 
 
 all: mandatory bonus
 	@ echo create libft.a : mandatory + bonus
@@ -86,5 +86,10 @@ clean:
 
 fclean:
 	rm -f $(NAME)
+
+so:
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(FILES) $(B_FILES)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(B_OBJ)
+	@ rm -f $(OBJ) $(B_OBJ)
 
 .PHONY: all clean fclean re

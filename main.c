@@ -12,6 +12,7 @@
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h> //contains malloc and size_t
+#include <ctype.h>
 //#include <stddef.h> //contains malloc
 
 void *ft_void(void *content)
@@ -20,7 +21,14 @@ void *ft_void(void *content)
 }
 
 int	main(void)
-{/*
+{
+	printf("A: %d\n", ft_isalnum('A'));	
+	printf("A: %d\n", isalnum('A'));	
+	printf("1: %d\n", ft_isalnum('1'));	
+	printf("1: %d\n", isalnum('1'));	
+	printf("-: %d\n", ft_isalnum('-'));
+	printf("-: %d\n", isalnum('-'));		
+/*
 //test atoi
 	int 	i = 0;
 	char	*atoi_str = "	-2147483648.ab4";
