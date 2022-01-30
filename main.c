@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h> //contains malloc and size_t
 #include <ctype.h>
+#include <string.h>
 //#include <stddef.h> //contains malloc
 
 void *ft_void(void *content)
@@ -22,12 +23,36 @@ void *ft_void(void *content)
 
 int	main(void)
 {
+// toupper
+	printf("toupper\n");
+	printf("i: %c\n", ft_toupper('i'));
+	printf("i: %c\n", toupper('i'));
+	printf("2: %c\n", ft_toupper('2'));
+	printf("2: %c\n", toupper('2'));
+	printf("300: %c\n", ft_toupper(300));
+	printf("300: %c\n", toupper(300));
+
+/*
+// isalnum
 	printf("A: %d\n", ft_isalnum('A'));	
 	printf("A: %d\n", isalnum('A'));	
 	printf("1: %d\n", ft_isalnum('1'));	
 	printf("1: %d\n", isalnum('1'));	
 	printf("-: %d\n", ft_isalnum('-'));
 	printf("-: %d\n", isalnum('-'));		
+*/
+// memmove
+	char from[] = "This is a string to copy";
+	char to[] = "..................<= to fill";
+/*
+	printf("memmove\n");
+	printf("output : %s\n", memmove(to, from, 0));
+	printf("output : %s\n", ft_memmove(to, from, 10));
+	printf("output : %s\n", memmove(0, from, 0));
+	printf("output : %s\n", ft_memmove(0, from, 0));
+	printf("output : %s\n", memmove(to, 0, 0));
+	printf("output : %s\n", ft_memmove(to, 0, 0));
+*/
 /*
 //test atoi
 	int 	i = 0;
@@ -141,7 +166,7 @@ int	main(void)
 	else
 		printf("strjoin		NOK\n");
 	free(outputjoin);
-*/
+
 //test lstnew
 	t_list *n1 = ft_lstnew("a");
 
@@ -204,5 +229,5 @@ int	main(void)
 	printf("New list: %s\n", (char *)n1->content);
 	ft_lstdelone(n1, free);
 	// free(n1);
-
+*/
 }
