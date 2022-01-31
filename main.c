@@ -23,6 +23,14 @@ void *ft_void(void *content)
 
 int	main(void)
 {
+
+// strtrim
+	char s1[] = "      ";
+	char *result;
+
+	result = ft_strtrim(s1, "");
+	printf("\"%s\"\n", result);
+/*
 // toupper
 	printf("toupper\n");
 	printf("i: %c\n", ft_toupper('i'));
@@ -31,7 +39,7 @@ int	main(void)
 	printf("2: %c\n", toupper('2'));
 	printf("300: %c\n", ft_toupper(300));
 	printf("300: %c\n", toupper(300));
-
+*/
 /*
 // isalnum
 	printf("A: %d\n", ft_isalnum('A'));	
@@ -42,15 +50,16 @@ int	main(void)
 	printf("-: %d\n", isalnum('-'));		
 */
 // memmove
+/*
 	char from[] = "This is a string to copy";
 	char to[] = "..................<= to fill";
-/*
+
 	printf("memmove\n");
-	printf("output : %s\n", memmove(to, from, 0));
+	printf("output : %s\n", memmove(0, from, 10));
 	printf("output : %s\n", ft_memmove(to, from, 10));
 	printf("output : %s\n", memmove(0, from, 0));
 	printf("output : %s\n", ft_memmove(0, from, 0));
-	printf("output : %s\n", memmove(to, 0, 0));
+	printf("output : %s\n", memmove(to, 0, 10));
 	printf("output : %s\n", ft_memmove(to, 0, 0));
 */
 /*
@@ -113,19 +122,23 @@ int	main(void)
 		printf("isprint		OK\n");
 	else
 		printf("isprint		NOK\n");
-
+*/
 //test itoa
+/*
 	char	*itoa_str;
-	
+	int i;
+
 	i = -2147483648;
 	itoa_str = ft_itoa(i);
+	printf("%s\n", itoa_str);
 	if(itoa_str[10] == '8' && itoa_str[0] == '-')
 		printf("itoa		OK\n");
 	else
 		printf("itoa		NOK\n");
 	free(itoa_str);
-
+*/
 //test memchr
+/*
 	char	*memchr = "Stringr";
 
 	if(ft_memchr(memchr, 'r', 7) == &memchr[2])
