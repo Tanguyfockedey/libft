@@ -25,6 +25,8 @@ void	*ft_memmove(void *to, const void *from, size_t size)
 	char	*tmp_to;
 	char	*tmp_from;
 
+	if (to == from)
+		return (to);
 	tmp_to = (char *) to;
 	tmp_from = (char *) from;
 	if (to < from)

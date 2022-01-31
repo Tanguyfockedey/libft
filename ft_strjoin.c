@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:57:05 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/25 14:38:28 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/31 15:34:37 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	size_t	i;
 	size_t	j;
 
+	if (!s1 || !s2)
+		return (0);
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	string = malloc(len * sizeof(char));
 	if (!string)

@@ -20,12 +20,8 @@
 void	ft_bzero(void *block, size_t size)
 {
 	char	*ptr;
-	size_t	i;
 
-	i = 0;
 	ptr = (char *)block;
 	while (size-- > 0)
-	{
-		ptr[i++] = 0;
-	}
+		*ptr++ = 0;
 }

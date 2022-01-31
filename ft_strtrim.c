@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:48:03 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/27 18:52:29 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/01/31 21:05:34 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static size_t	ft_endtrim(const char *str, const char *set)
 	len = ft_strlen(str);
 	i = 0;
 	j = len;
-	while (set[i])
+	while (set[i] && j)
 	{
 		if (set[i] == str[j - 1])
 		{
@@ -78,20 +78,24 @@ static char	*ft_copy(const char *str, size_t len)
 	return (string);
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s, const char *set)
 {
 	char	*string;
 	size_t	pretrim;
 	size_t	endtrim;
 	size_t	len;
 
-	len = ft_strlen(s1);
-	pretrim = ft_pretrim(s1, set);
-	endtrim = ft_endtrim(s1, set);
-	if (pretrim + endtrim > len)
-		string = ft_copy(s1, 0);
+	if (!s)
+		return (0);
+	if (!set)
+		return (ft_strdup(s));
+	len = ft_strlen(s);
+	pretrim = ft_pretrim(s, set);
+	endtrim = ft_endtrim(s, set);
+	if (pretrim + endtrim >= len)
+		string = ft_strdup("");
 	else
-		string = ft_copy(&s1[pretrim], len - pretrim - endtrim);
+		string = ft_copy(&s[pretrim], len - pretrim - endtrim);
 	return (string);
 }
 

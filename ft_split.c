@@ -78,6 +78,8 @@ char	**ft_split(const char *s, char c)
 	size_t		i;
 	size_t		str_i;
 
+	if (!s)
+		return (0);
 	str_i = 0;
 	substr_count = ft_substr_count(s, c);
 	result = malloc((substr_count + 1) * sizeof(char *));

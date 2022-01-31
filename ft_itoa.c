@@ -26,8 +26,8 @@ static unsigned int	ft_intlen(int n)
 	un = n;
 	if (n < 0)
 	{
-		intlen++;
 		un = -n;
+		intlen++;
 	}
 	while (un > 9)
 	{

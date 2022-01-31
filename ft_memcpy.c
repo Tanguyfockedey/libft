@@ -24,6 +24,8 @@ void	*ft_memcpy(void *to, const void *from, size_t size)
 	char	*tmp_to;
 	size_t	i;
 
+	if (to == from)
+		return (to);
 	i = 0;
 	tmp_to = (char *) to;
 	tmp_from = (char *) from;
