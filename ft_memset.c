@@ -31,15 +31,3 @@ void	*ft_memset(void *block, int c, size_t size)
 	}
 	return (block);
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-	char str[] = "This is a string to be erased !\n";
-
-	printf("%s", str);
-	ft_memset(str, '-', 20);
-	printf("%s", str);
-}
-*/

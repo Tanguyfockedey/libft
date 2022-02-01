@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 18:19:58 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/21 18:13:13 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/01 16:55:19 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

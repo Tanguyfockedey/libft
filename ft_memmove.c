@@ -17,8 +17,8 @@
 	including those bytes which also belong to the block at to.
 	The value returned by memmove is the value of to.
 */
+
 #include "libft.h"
-#include <stdlib.h> 
 
 void	*ft_memmove(void *to, const void *from, size_t size)
 {
@@ -38,16 +38,3 @@ void	*ft_memmove(void *to, const void *from, size_t size)
 	}
 	return (to);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char from[] = "This is a string to copy";
-	char to[] = "..................<= to fill";
-
-	printf("%s\n%s\n\n", from, to);
-	ft_memmove(to, from, 16);
-	printf("%s\n%s\n\n", from, to);
-}
-*/

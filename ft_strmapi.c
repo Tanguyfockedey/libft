@@ -40,24 +40,3 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	string[strlen] = '\0';
 	return (string);
 }
-
-/*
-#include <stdio.h>
-char f(unsigned int i, char c)
-{
-	char string;
-	(void)i;
-	string = c + 1;
-	return (string);
-}
-
-int main(void)
-{
-	char	*str1 = "abc";
-	char	*str2;
-
-	str2 = ft_strmapi(str1, *f);
-	printf("%s\n", str2);
-	free(str2);
-}
-*/

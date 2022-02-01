@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:33:22 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/20 17:25:29 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/01 16:52:10 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,3 @@ char	*ft_strdup(const char *s)
 	dest[length] = '\0';
 	return (dest);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char *str = "This is a string";
-	char *str2;
-
-	str2 = ft_strdup(str);
-	printf("%s\n%s\n", str, str2);
-	//printf("%s\n", ft_strdup(""));
-	//printf("%s\n", ft_strdup("this is\0 a test"));
-	free(str2);
-}
-*/

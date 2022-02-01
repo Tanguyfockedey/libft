@@ -20,18 +20,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/*
-#include <fcntl.h>
-#include <stdio.h>
-int	main(void)
-{
-	int fd;
-	char c = 'Z';
-
-	fd = open("test.txt", O_RDWR | O_CREAT, S_IRWXO);
-	printf("%d\n", fd);
-	ft_putchar_fd(c, fd);
-	close(fd);
-}
-*/

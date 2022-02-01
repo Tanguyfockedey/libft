@@ -38,25 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar('0' + unb, fd);
 }
-
-/*
-#include <fcntl.h>
-#include <stdio.h>
-int	main(void)
-{
-	int fd;
-	int n = 2;
-	int i = 100;
-
-	fd = open("test.txt", O_RDWR | O_APPEND | O_CREAT, S_IRWXU);
-	printf("File descriptor is : %d\nNumber is : %d\n", fd, n);
-	
-	while(i-- > 0)
-	{
-		ft_putnbr_fd(n, fd);
-		write(fd, "\n", 1);
-		n = n * -2;
-	} 
-	close(fd);
-}
-*/

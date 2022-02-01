@@ -36,16 +36,3 @@ void	*ft_memcpy(void *to, const void *from, size_t size)
 	}
 	return (to);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char from[] = "This is a string to copy";
-	char to[] = "..................<= to fill";
-
-	printf("%s\n%s\n\n", from, to);
-	ft_memcpy(to, from, 16);
-	printf("%s\n%s\n\n", from, to);
-}
-*/

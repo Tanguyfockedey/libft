@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:48:03 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/31 21:05:34 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/01 16:56:51 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,17 +98,3 @@ char	*ft_strtrim(const char *s, const char *set)
 		string = ft_copy(&s[pretrim], len - pretrim - endtrim);
 	return (string);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*str = "abc testTest  cba";
-	char	*set = " a b c ";
-	char	*result;
-
-	result = ft_strtrim(str, set);
-	printf("%s\n", result);
-	free(result);
-}
-*/

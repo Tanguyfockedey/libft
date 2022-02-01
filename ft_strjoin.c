@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:57:05 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/31 15:34:37 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/01 16:53:06 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,19 +46,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	string[i + j] = '\0';
 	return (string);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	*str1 = "This is the beginning ";
-	char	*str2 = "and this is the end !"; 
-	char	*output;
-
-
-	printf("\"%s\" + \"%s\"\n", str1, str2);
-	output = ft_strjoin(str1, str2);
-	printf("%s\n", output);
-	free(output);
-}
-*/

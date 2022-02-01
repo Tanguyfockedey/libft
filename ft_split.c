@@ -96,24 +96,3 @@ char	**ft_split(const char *s, char c)
 	result[substr_count] = NULL;
 	return (result);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char *str = "/aa//bbb";
-	char c = '\0';
-	char **output;
-	int i = 0;
-
-	output = ft_split(str, c);
-	while(output[i])
-	{
-		printf("%s\n", output[i]);
-		free(output[i]);
-		i++;
-	}
-	printf("%s\n", output[i]);
-	free(output);
-}
-*/

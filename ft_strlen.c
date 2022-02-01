@@ -25,15 +25,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	str[] = "Test string is 33 characters long";
-	int x;
-
-	x = ft_strlen(str);
-	printf("Test string is %d characters long\n", x);
-}
-*/

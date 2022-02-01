@@ -23,18 +23,3 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, s, ft_strlen(s));
 }
-
-/*
-#include <fcntl.h>
-#include <stdio.h>
-int	main(void)
-{
-	int fd;
-	char *s = "This is a string !";
-
-	fd = open("test.txt", O_RDWR | O_CREAT, S_IRWXU);
-	printf("File descriptor is : %d\nString is : %s\n", fd, s);
-	ft_putstr_fd(s, fd);
-	close(fd);
-}
-*/

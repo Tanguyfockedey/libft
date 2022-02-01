@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:31:45 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/20 17:37:45 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/01 16:56:15 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t size)
 	equals = (unsigned char)s1[i] - (unsigned char)s2[i];
 	return (equals);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	char	str1[] = "This is a test";
-	char	str2[] = "This is a test";
-
-	printf("%d\n", ft_strncmp(str1, str2, 7));
-	printf("%d\n", strncmp(str1, str2, 7));
-}
-*/
