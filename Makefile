@@ -45,7 +45,7 @@ FILES	=	ft_isalpha.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c 
+			ft_putnbr_fd.c
 			
 B_FILES	=	ft_lstnew.c \
 			ft_lstadd_front.c \
@@ -55,7 +55,7 @@ B_FILES	=	ft_lstnew.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
-			ft_lstmap.c \
+			ft_lstmap.c
 
 
 OBJ		= $(FILES:.c=.o)
@@ -70,6 +70,9 @@ re: fclean all
 all: mandatory bonus
 	@ echo create libft.a : mandatory + bonus
 
+$(NAME): $(OBJ)
+	@ ar -rc $(NAME) $(OBJ)
+
 mandatory: $(OBJ)
 	@ ar -rc $(NAME) $(OBJ)
 
@@ -83,13 +86,10 @@ main:
 
 clean:
 	@ rm -f $(OBJ) $(B_OBJ)
+	@ echo delete .o
 
-fclean:
-	rm -f $(NAME)
-
-so:
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(FILES) $(B_FILES)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(B_OBJ)
-	@ rm -f $(OBJ) $(B_OBJ)
+fclean: clean
+	@ rm -f $(NAME)
+	@ echo delete libft.a
 
 .PHONY: all clean fclean re mandatory bonus main so
