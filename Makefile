@@ -77,11 +77,6 @@ bonus: $(B_OBJ)
 	@ ar -rc $(NAME) $(B_OBJ)
 	@ echo create bonus
 
-main:
-	gcc $(FLAGS) -fsanitize=address main.c libft.a -g3
-	./a.out
-	rm -f a.out
-
 clean:
 	@ rm -f $(OBJ) $(B_OBJ)
 	@ echo delete .o
@@ -90,4 +85,4 @@ fclean: clean
 	@ rm -f $(NAME)
 	@ echo delete libft.a
 
-.PHONY: all clean fclean re mandatory bonus main so
+.PHONY: all re bonus clean fclean
