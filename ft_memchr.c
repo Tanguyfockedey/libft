@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:32:05 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/25 14:44:12 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:59:30 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 	match was found.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *block, int c, size_t size)
 {

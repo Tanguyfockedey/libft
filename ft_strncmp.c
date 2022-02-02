@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:31:45 by tfockede          #+#    #+#             */
-/*   Updated: 2022/02/01 16:56:15 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/02 21:01:21 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 	If the two strings are equal, strncmp returns 0.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t size)
 {

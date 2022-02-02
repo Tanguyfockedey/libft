@@ -16,7 +16,7 @@
 	if the two arrays to and from overlap.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *to, const void *from, size_t size)
 {

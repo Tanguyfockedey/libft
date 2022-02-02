@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:32:41 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/25 14:51:47 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:57:52 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 	which is returned as a value of type int.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 static char	*ft_prestr(char *str, char *sign)
 {

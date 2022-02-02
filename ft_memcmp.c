@@ -18,7 +18,7 @@
 	If the contents of the two blocks are equal, memcmp returns 0.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *a1, const void *a2, size_t size)
 {

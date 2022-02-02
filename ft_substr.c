@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:13:17 by tfockede          #+#    #+#             */
-/*   Updated: 2022/02/02 20:08:30 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/02 21:01:37 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 	Allocates and returns a substring from the string ’s’.
 	The substring begins at index ’start’ and is of maximum size ’len’.
 */
+
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_substr(const char *str, size_t start, size_t len)
 {

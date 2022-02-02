@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:31:20 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/25 14:36:41 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/02 21:01:26 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 	the end of the string string (instead of forwards from the front).
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {

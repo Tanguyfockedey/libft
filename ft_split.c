@@ -17,7 +17,6 @@
 */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	ft_substr_count(const char *s, char c)
 {

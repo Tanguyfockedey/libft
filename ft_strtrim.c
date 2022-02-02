@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:48:03 by tfockede          #+#    #+#             */
-/*   Updated: 2022/02/01 16:56:51 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/02 21:01:30 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	ft_pretrim(const char *str, const char *set)
 {

@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 16:32:29 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/25 14:36:57 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/02 21:01:24 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 	searched. Characters that appear after a '\0' character are not searched.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

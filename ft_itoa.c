@@ -15,7 +15,7 @@
 	argument. Negative numbers must be handled.
 */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static unsigned int	ft_intlen(int n)
 {

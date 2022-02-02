@@ -6,7 +6,7 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 18:22:33 by tfockede          #+#    #+#             */
-/*   Updated: 2022/01/25 14:39:23 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/02 21:00:42 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 	'\0' then the end of string is returned.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
