@@ -65,19 +65,17 @@ B_OBJ	= $(B_FILES:.c=.o)
 %.o: %.c
 	@ gcc $(FLAGS) -c $< -o $@
 
-re: fclean all
+all: $(NAME)
 
-all: mandatory bonus
-	@ echo create libft.a : mandatory + bonus
+re: fclean all
 
 $(NAME): $(OBJ)
 	@ ar -rc $(NAME) $(OBJ)
-
-mandatory: $(OBJ)
-	@ ar -rc $(NAME) $(OBJ)
+	@ echo create mandatory
 
 bonus: $(B_OBJ)
 	@ ar -rc $(NAME) $(B_OBJ)
+	@ echo create bonus
 
 main:
 	gcc $(FLAGS) -fsanitize=address main.c libft.a -g3
