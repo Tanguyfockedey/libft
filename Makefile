@@ -57,7 +57,6 @@ B_FILES	=	ft_lstnew.c \
 			ft_lstiter.c \
 			ft_lstmap.c
 
-
 OBJ		= $(FILES:.c=.o)
 
 B_OBJ	= $(B_FILES:.c=.o)
