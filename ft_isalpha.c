@@ -6,15 +6,13 @@
 /*   By: tfockede <tfockede@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:46:09 by tfockede          #+#    #+#             */
-/*   Updated: 2022/02/02 20:58:22 by tfockede         ###   ########.fr       */
+/*   Updated: 2022/02/03 11:59:58 by tfockede         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 	Returns true (1) if c is an alphabetic character (a letter).
 */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

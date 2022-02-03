@@ -15,8 +15,6 @@
 	all the graphic characters, plus the space (‘ ’) character.
 */
 
-#include "libft.h"
-
 int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
