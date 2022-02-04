@@ -63,18 +63,21 @@ B_OBJ	= $(B_FILES:.c=.o)
 
 %.o: %.c
 	@ gcc $(FLAGS) -c $< -o $@
+	@ printf "."
 
 all: $(NAME)
 
 re: fclean all
 
 $(NAME): $(OBJ)
-	@ ar -rc $(NAME) $(OBJ)
+	@ printf "\n"
 	@ echo create mandatory
+	@ ar -rc $(NAME) $(OBJ)
 
-bonus: $(B_OBJ)
-	@ ar -rc $(NAME) $(B_OBJ)
+bonus: $(B_OBJ) $(OBJ)
+	@ printf "\n"
 	@ echo create bonus
+	@ ar -rc $(NAME) $(B_OBJ) $(OBJ)
 
 clean:
 	@ rm -f $(OBJ) $(B_OBJ)
